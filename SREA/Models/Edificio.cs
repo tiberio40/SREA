@@ -12,5 +12,7 @@ namespace SREA.Models
         public int ID_Edificio { get; set; }
 
         public string Nombre { get; set; }
+
+        public virtual ICollection<Salon> Salon { get; set; }
     }
 }

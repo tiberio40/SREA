@@ -25,5 +25,9 @@ namespace SREA.Models
         public virtual ICollection<Dia_Apartado> Dia_Apartado { get; set; }
 
         public virtual ICollection<Respuesta> Respuesta { get; set; }
+
+        public int ID_Persona { get; set; }
+        public virtual Persona Persona { get; set; }
+
     }
 }
