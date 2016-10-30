@@ -20,5 +20,7 @@ namespace SREA.Models
         }
 
         public System.Data.Entity.DbSet<SREA.Models.Edificio> Edificios { get; set; }
+
+        public System.Data.Entity.DbSet<SREA.Models.Salon> Salons { get; set; }
     }
 }

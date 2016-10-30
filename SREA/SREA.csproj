@@ -168,11 +168,13 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\EdificiosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SalonesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Edificio.cs" />
+    <Compile Include="Models\Salon.cs" />
     <Compile Include="Models\SREAContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -221,6 +223,11 @@
     <Content Include="Views\Edificios\Details.cshtml" />
     <Content Include="Views\Edificios\Edit.cshtml" />
     <Content Include="Views\Edificios\Index.cshtml" />
+    <Content Include="Views\Salones\Create.cshtml" />
+    <Content Include="Views\Salones\Delete.cshtml" />
+    <Content Include="Views\Salones\Details.cshtml" />
+    <Content Include="Views\Salones\Edit.cshtml" />
+    <Content Include="Views\Salones\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
