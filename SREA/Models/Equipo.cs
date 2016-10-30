@@ -6,17 +6,12 @@ using System.Web;
 
 namespace SREA.Models
 {
-    public class Salon
+    public class Equipo
     {
         [Key]
-        public int ID_Salon { get; set; }
+        public int ID_Equipo { get; set; }
 
-        public string Nombre { get; set; }
-
-        public int Capacidad { get; set; }
-
-        public int ID_Edificio { get; set; }
-        public virtual Edificio Edificio { get; set; }
+        public string Tipo_Equipo { get; set; }
 
         public virtual ICollection<Inventario> Inventario { get; set; }
     }
