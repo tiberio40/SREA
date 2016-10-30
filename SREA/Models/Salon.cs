@@ -19,5 +19,7 @@ namespace SREA.Models
         public virtual Edificio Edificio { get; set; }
 
         public virtual ICollection<Inventario> Inventario { get; set; }
+
+        public virtual ICollection<Solicitud> Solicitud { get; set; }
     }
 }

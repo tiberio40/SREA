@@ -175,10 +175,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Dia_Apartado.cs" />
     <Compile Include="Models\Edificio.cs" />
     <Compile Include="Models\Equipo.cs" />
     <Compile Include="Models\Inventario.cs" />
+    <Compile Include="Models\Respuesta.cs" />
     <Compile Include="Models\Salon.cs" />
+    <Compile Include="Models\Solicitud.cs" />
     <Compile Include="Models\SREAContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
