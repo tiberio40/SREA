@@ -9,6 +9,8 @@ namespace SREA.Models
     public class Persona
     {
         [Key]
+        public int ID_Persona { get; set; }
+
         public string Nick { get; set; }
         
         public string Nombre { get; set; }
