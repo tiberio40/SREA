@@ -155,6 +155,7 @@ namespace SREA.Controllers
                 Session["ID_Persona"] = usr.ID_Persona.ToString();
                 Session["Nick"] = usr.Nick.ToString();
                 Session["Nombre_Usuario"] = usr.Nombre.ToString() + " " + usr.Apellidos.ToString();
+                Session["Privilegio"] = usr.ID_Tipo_Usuario.ToString();
                 return RedirectToAction("Loggedin");
             }
             else
@@ -201,6 +202,8 @@ namespace SREA.Controllers
             if (Session["ID_Persona"] != null)
             {
                 Session["ID_Persona"] = null;
+                Session["Nick"] = null;
+                Session["Nombre_Usuario"] = null;
                 return RedirectToAction("Login");
             }
 
