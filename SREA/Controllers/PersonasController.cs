@@ -154,6 +154,7 @@ namespace SREA.Controllers
             {
                 Session["ID_Persona"] = usr.ID_Persona.ToString();
                 Session["Nick"] = usr.Nick.ToString();
+                Session["Nombre_Usuario"] = usr.Nombre.ToString() + " " + usr.Apellidos.ToString();
                 return RedirectToAction("Loggedin");
             }
             else
