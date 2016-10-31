@@ -9,10 +9,22 @@
 <h4>Planta Fisica</h4>
 
 <font>En esta Seccion se podra añadir lo que son los Edificios y Salones que lo Integran:</font>
+<br />
 <ul class="list-group">
-    <li class="list-group-item active list-group-item-heading"><font color="white">Planta y Equipo</font></li>
-    <li class="list-group-item">@Html.ActionLink("Edificios", "Index", "Edificios")</li>
-    <li class="list-group-item">@Html.ActionLink("Salones", "Index", "Salones")</li>
+    <li class="list-group-item active list-group-item-heading"><span class="glyphicon glyphicon-cog"></span><font color="white"> Planta y Equipo</font></li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-th-large"></span>@Html.ActionLink(" Edificios", "Index", "Edificios")</li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-th-large"></span>@Html.ActionLink(" Salones", "Index", "Salones")</li>
 </ul>
 
-list-group-item-success
+<h4>Usuarios</h4>
+<br />
+<font>En esta Seccion podra consultar, ingresar, modificar y eliminar los usuarios que se encuentren registados:</font>
+<ul class="list-group">
+    <li class="list-group-item active list-group-item-heading"><span class="glyphicon glyphicon-cog"></span><font color="white"> Usuarios</font></li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-user"></span>@Html.ActionLink(" Lista Usuarios", "Index", "Personas")</li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-pencil"></span>@Html.ActionLink(" Agregar", "Create", "Personas")</li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-edit"></span>@Html.ActionLink(" Modificar", "Create", "Personas")</li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-trash"></span>@Html.ActionLink(" Eliminar", "Create", "Personas")</li>
+
+</ul>
+
