@@ -166,11 +166,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Dia_ApartadoController.cs" />
     <Compile Include="Controllers\EdificiosController.cs" />
     <Compile Include="Controllers\EquiposController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventariosController.cs" />
+    <Compile Include="Controllers\PersonasController.cs" />
+    <Compile Include="Controllers\RespuestasController.cs" />
     <Compile Include="Controllers\SalonesController.cs" />
+    <Compile Include="Controllers\SolicitudesController.cs" />
+    <Compile Include="Controllers\Tipo_UsuarioController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -191,6 +197,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\Dynamics-NAV-Logo.jpg" />
+    <Content Include="Content\img\encabezado.jpg" />
+    <Content Include="Content\misestilos.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -248,9 +257,40 @@
     <Content Include="Views\Equipos\Details.cshtml" />
     <Content Include="Views\Equipos\Edit.cshtml" />
     <Content Include="Views\Equipos\Index.cshtml" />
+    <Content Include="Views\Solicitudes\Create.cshtml" />
+    <Content Include="Views\Solicitudes\Delete.cshtml" />
+    <Content Include="Views\Solicitudes\Details.cshtml" />
+    <Content Include="Views\Solicitudes\Edit.cshtml" />
+    <Content Include="Views\Solicitudes\Index.cshtml" />
+    <Content Include="Views\Respuestas\Create.cshtml" />
+    <Content Include="Views\Respuestas\Delete.cshtml" />
+    <Content Include="Views\Respuestas\Details.cshtml" />
+    <Content Include="Views\Respuestas\Edit.cshtml" />
+    <Content Include="Views\Respuestas\Index.cshtml" />
+    <Content Include="Views\Dia_Apartado\Create.cshtml" />
+    <Content Include="Views\Dia_Apartado\Delete.cshtml" />
+    <Content Include="Views\Dia_Apartado\Details.cshtml" />
+    <Content Include="Views\Dia_Apartado\Edit.cshtml" />
+    <Content Include="Views\Dia_Apartado\Index.cshtml" />
+    <Content Include="Views\Personas\Create.cshtml" />
+    <Content Include="Views\Personas\Delete.cshtml" />
+    <Content Include="Views\Personas\Details.cshtml" />
+    <Content Include="Views\Personas\Edit.cshtml" />
+    <Content Include="Views\Personas\Index.cshtml" />
+    <Content Include="Views\Tipo_Usuario\Create.cshtml" />
+    <Content Include="Views\Tipo_Usuario\Delete.cshtml" />
+    <Content Include="Views\Tipo_Usuario\Details.cshtml" />
+    <Content Include="Views\Tipo_Usuario\Edit.cshtml" />
+    <Content Include="Views\Tipo_Usuario\Index.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Cuenta\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

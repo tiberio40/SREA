@@ -26,5 +26,17 @@ namespace SREA.Models
         public System.Data.Entity.DbSet<SREA.Models.Inventario> Inventarios { get; set; }
 
         public System.Data.Entity.DbSet<SREA.Models.Equipo> Equipoes { get; set; }
+
+        public System.Data.Entity.DbSet<SREA.Models.Solicitud> Solicituds { get; set; }
+
+        public System.Data.Entity.DbSet<SREA.Models.Persona> Personas { get; set; }
+
+        public System.Data.Entity.DbSet<SREA.Models.Respuesta> Respuestas { get; set; }
+
+        public System.Data.Entity.DbSet<SREA.Models.Dia_Apartado> Dia_Apartado { get; set; }
+
+        public System.Data.Entity.DbSet<SREA.Models.Tipo_Usuario> Tipo_Usuario { get; set; }
+
+        public System.Data.Entity.DbSet<SREA.Models.Usuario> Usuarios { get; set; }
     }
 }

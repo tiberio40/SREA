@@ -13,7 +13,5 @@ namespace SREA.Models
 
         public string Clave { get; set; }
 
-        public int ID_Persona { get; set; }
-        public virtual Persona Persona { get; set; }
     }
 }
