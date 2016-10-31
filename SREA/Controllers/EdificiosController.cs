@@ -25,6 +25,11 @@ namespace SREA.Controllers
             return View(db.Edificios.ToList());
         }
 
+        public ActionResult Modificar()
+        {
+            return View(db.Edificios.ToList());
+        }
+
         // GET: Edificios/Details/5
         public ActionResult Details(int? id)
         {

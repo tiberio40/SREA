@@ -293,6 +293,9 @@
     <Content Include="Views\Personas\Administrar.cshtml" />
     <Content Include="Views\Edificios\Index.cshtml" />
     <Content Include="Views\Edificios\Lista.cshtml" />
+    <Content Include="Views\Edificios\Create.cshtml" />
+    <Content Include="Views\Edificios\Modificar.cshtml" />
+    <Content Include="Views\Edificios\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

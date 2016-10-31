@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<SREA.Models.Edificio>
 
 @{
-    ViewBag.Title = "Edificios - Lista";
+    ViewBag.Title = "Edificios - Modificar";
 }
 
-<h2>Lista de Edificios</h2>
+<h2>Modificar</h2>
 
 <table class="table">
     <tr class = "success">
@@ -22,12 +22,12 @@
             @Html.DisplayFor(modelItem => item.Nombre)
         </td>
         <td>
-            @Html.ActionLink("Detalles", "Details", new { id=item.ID_Edificio })
+            @Html.ActionLink("Editar", "Edit", new { id = item.ID_Edificio }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.ID_Edificio })
         </td>
     </tr>
 }
 
-    
 </table>
 
 <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Edificios")'">Regresar</button>
