@@ -4,17 +4,16 @@
     ViewBag.Title = "Lista";
 }
 
-<h2>Lista</h2>
+<h2>Lista de Edificios</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
-    <tr>
+    <tr class = "success">
         <th>
             @Html.DisplayNameFor(model => model.Nombre)
         </th>
-        <th></th>
+        <th>
+            Opciones
+        </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -23,11 +22,12 @@
             @Html.DisplayFor(modelItem => item.Nombre)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Edificio }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_Edificio }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Edificio })
+            @Html.ActionLink("Detalles", "Details", new { id=item.ID_Edificio })
         </td>
     </tr>
 }
 
+    
 </table>
+
+<button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Edificios")'">Regresar</button>
