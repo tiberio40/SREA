@@ -17,12 +17,12 @@ namespace SREA.Controllers
         // GET: Personas
         public ActionResult Index()
         {
-            var personas = db.Personas.Include(p => p.Tipo_Usuario).Include(p => p.Usuario);
+            var personas = db.Personas.Include(p => p.Tipo_Usuario);
             return View(personas.ToList());
         }
 
         // GET: Personas/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
@@ -40,7 +40,6 @@ namespace SREA.Controllers
         public ActionResult Create()
         {
             ViewBag.ID_Tipo_Usuario = new SelectList(db.Tipo_Usuario, "ID_Tipo_Usuario", "Descripcion");
-            ViewBag.Nick = new SelectList(db.Usuarios, "Nick", "Clave");
             return View();
         }
 
@@ -49,7 +48,7 @@ namespace SREA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_Persona,Nombre,Apellidos,Telefono,Email,ID_Tipo_Usuario,Nick")] Persona persona)
+        public ActionResult Create([Bind(Include = "Nick,Nombre,Apellidos,Telefono,Email,Clave,ID_Tipo_Usuario")] Persona persona)
         {
             if (ModelState.IsValid)
             {
@@ -59,12 +58,11 @@ namespace SREA.Controllers
             }
 
             ViewBag.ID_Tipo_Usuario = new SelectList(db.Tipo_Usuario, "ID_Tipo_Usuario", "Descripcion", persona.ID_Tipo_Usuario);
-            ViewBag.Nick = new SelectList(db.Usuarios, "Nick", "Clave", persona.Nick);
             return View(persona);
         }
 
         // GET: Personas/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
@@ -76,7 +74,6 @@ namespace SREA.Controllers
                 return HttpNotFound();
             }
             ViewBag.ID_Tipo_Usuario = new SelectList(db.Tipo_Usuario, "ID_Tipo_Usuario", "Descripcion", persona.ID_Tipo_Usuario);
-            ViewBag.Nick = new SelectList(db.Usuarios, "Nick", "Clave", persona.Nick);
             return View(persona);
         }
 
@@ -85,7 +82,7 @@ namespace SREA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_Persona,Nombre,Apellidos,Telefono,Email,ID_Tipo_Usuario,Nick")] Persona persona)
+        public ActionResult Edit([Bind(Include = "Nick,Nombre,Apellidos,Telefono,Email,Clave,ID_Tipo_Usuario")] Persona persona)
         {
             if (ModelState.IsValid)
             {
@@ -94,12 +91,11 @@ namespace SREA.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.ID_Tipo_Usuario = new SelectList(db.Tipo_Usuario, "ID_Tipo_Usuario", "Descripcion", persona.ID_Tipo_Usuario);
-            ViewBag.Nick = new SelectList(db.Usuarios, "Nick", "Clave", persona.Nick);
             return View(persona);
         }
 
         // GET: Personas/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
@@ -116,7 +112,7 @@ namespace SREA.Controllers
         // POST: Personas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
             Persona persona = db.Personas.Find(id);
             db.Personas.Remove(persona);

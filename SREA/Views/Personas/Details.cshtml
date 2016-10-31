@@ -19,14 +19,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Usuario.Clave)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Usuario.Clave)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Nombre)
         </dt>
 
@@ -58,9 +50,17 @@
             @Html.DisplayFor(model => model.Email)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Clave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clave)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Persona }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Nick }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

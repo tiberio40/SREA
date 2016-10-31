@@ -176,7 +176,6 @@
     <Compile Include="Controllers\SalonesController.cs" />
     <Compile Include="Controllers\SolicitudesController.cs" />
     <Compile Include="Controllers\Tipo_UsuarioController.cs" />
-    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -272,21 +271,16 @@
     <Content Include="Views\Dia_Apartado\Details.cshtml" />
     <Content Include="Views\Dia_Apartado\Edit.cshtml" />
     <Content Include="Views\Dia_Apartado\Index.cshtml" />
-    <Content Include="Views\Personas\Create.cshtml" />
-    <Content Include="Views\Personas\Delete.cshtml" />
-    <Content Include="Views\Personas\Details.cshtml" />
-    <Content Include="Views\Personas\Edit.cshtml" />
-    <Content Include="Views\Personas\Index.cshtml" />
     <Content Include="Views\Tipo_Usuario\Create.cshtml" />
     <Content Include="Views\Tipo_Usuario\Delete.cshtml" />
     <Content Include="Views\Tipo_Usuario\Details.cshtml" />
     <Content Include="Views\Tipo_Usuario\Edit.cshtml" />
     <Content Include="Views\Tipo_Usuario\Index.cshtml" />
-    <Content Include="Views\Usuarios\Create.cshtml" />
-    <Content Include="Views\Usuarios\Delete.cshtml" />
-    <Content Include="Views\Usuarios\Details.cshtml" />
-    <Content Include="Views\Usuarios\Edit.cshtml" />
-    <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\Personas\Create.cshtml" />
+    <Content Include="Views\Personas\Delete.cshtml" />
+    <Content Include="Views\Personas\Details.cshtml" />
+    <Content Include="Views\Personas\Edit.cshtml" />
+    <Content Include="Views\Personas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -9,8 +9,8 @@ namespace SREA.Models
     public class Persona
     {
         [Key]
-        public int ID_Persona { get; set; }
-
+        public string Nick { get; set; }
+        
         public string Nombre { get; set; }
 
         public string Apellidos { get; set; }
@@ -19,6 +19,8 @@ namespace SREA.Models
 
         public string Email { get; set; }
 
+        public string Clave { get; set; }
+
         public virtual ICollection<Persona> Personas { get; set; }
 
         public virtual ICollection<Solicitud> Solicitud { get; set; }
@@ -26,7 +28,6 @@ namespace SREA.Models
         public int ID_Tipo_Usuario { get; set; }
         public virtual Tipo_Usuario Tipo_Usuario { get; set; }
 
-        public string Nick { get; set; }
-        public virtual Usuario Usuario { get; set; }
+
     }
 }
