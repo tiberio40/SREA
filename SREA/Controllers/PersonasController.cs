@@ -128,5 +128,83 @@ namespace SREA.Controllers
             }
             base.Dispose(disposing);
         }
+
+        //INGRESAR A LA CUENTA - REDIRECCION
+
+        public ActionResult Login()
+        {
+            if (Session["ID_Persona"] != null)
+            {
+                return RedirectToAction("Loggedin");
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        //INGRESAR A LA CUENTA - FORMULARIO INGRESO
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(Persona user)
+        {
+            var usr = db.Personas.Where(x => x.Nick == user.Nick && x.Clave == user.Clave).FirstOrDefault();
+            if (usr != null)
+            {
+                Session["ID_Persona"] = usr.ID_Persona.ToString();
+                Session["Nick"] = usr.Nick.ToString();
+                return RedirectToAction("Loggedin");
+            }
+            else
+            {
+                ModelState.AddModelError("", "Username or Password estan mal");
+            }
+            return View();
+        }
+
+        //CONFIRMACION INGRESO
+
+        public ActionResult Loggedin()
+        {
+            if (Session["ID_Persona"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
+
+        }
+
+        public ActionResult LoginOut()
+        {
+            if (Session["ID_Persona"] == null)
+            {
+                return RedirectToAction("Login");
+                
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        //INGRESAR A LA CUENTA - FORMULARIO INGRESO
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LoginOut(Persona user)
+        {
+            if (Session["ID_Persona"] != null)
+            {
+                Session["ID_Persona"] = null;
+                return RedirectToAction("Login");
+            }
+
+            return View();
+        }
+
     }
 }

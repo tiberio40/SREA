@@ -281,6 +281,9 @@
     <Content Include="Views\Personas\Details.cshtml" />
     <Content Include="Views\Personas\Edit.cshtml" />
     <Content Include="Views\Personas\Index.cshtml" />
+    <Content Include="Views\Personas\Login.cshtml" />
+    <Content Include="Views\Personas\Loggedin.cshtml" />
+    <Content Include="Views\Personas\LoginOut.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

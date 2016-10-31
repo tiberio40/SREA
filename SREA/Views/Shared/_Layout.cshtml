@@ -25,6 +25,13 @@
                     <li>@Html.ActionLink("Lista de Salones", "About", "Home")</li>
                     <li>@Html.ActionLink("Quienes Somos", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Cuenta", "Contact", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Opciones Usuario<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Login", "Login", "Personas")</li>
+                            <li>@Html.ActionLink("Login out", "LoginOut", "Personas")</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
