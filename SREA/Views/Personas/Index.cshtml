@@ -1,69 +1,7 @@
-﻿@model IEnumerable<SREA.Models.Persona>
-
+﻿
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Tipo_Usuario.Descripcion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nick)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Apellidos)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Telefono)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Clave)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tipo_Usuario.Descripcion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nick)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Apellidos)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Telefono)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Clave)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Persona }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_Persona }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Persona })
-        </td>
-    </tr>
-}
-
-</table>

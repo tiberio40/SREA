@@ -17,6 +17,16 @@ namespace SREA.Controllers
         // GET: Personas
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public ActionResult Administrar()
+        {
+            return View();
+        }
+
+        public ActionResult Listado_Usuarios()
+        {
             var personas = db.Personas.Include(p => p.Tipo_Usuario);
             return View(personas.ToList());
         }

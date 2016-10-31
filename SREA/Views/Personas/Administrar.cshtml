@@ -1,0 +1,18 @@
+﻿@model SREA.Models.Persona
+
+@{
+    ViewBag.Title = "Administrar";
+}
+
+<h2>Administrar</h2>
+<br />
+<h4>Planta Fisica</h4>
+
+<font>En esta Seccion se podra añadir lo que son los Edificios y Salones que lo Integran:</font>
+<ul class="list-group">
+    <li class="list-group-item active list-group-item-heading"><font color="white">Planta y Equipo</font></li>
+    <li class="list-group-item">@Html.ActionLink("Edificios", "Index", "Edificios")</li>
+    <li class="list-group-item">@Html.ActionLink("Salones", "Index", "Salones")</li>
+</ul>
+
+list-group-item-success

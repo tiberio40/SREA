@@ -280,10 +280,12 @@
     <Content Include="Views\Personas\Delete.cshtml" />
     <Content Include="Views\Personas\Details.cshtml" />
     <Content Include="Views\Personas\Edit.cshtml" />
-    <Content Include="Views\Personas\Index.cshtml" />
     <Content Include="Views\Personas\Login.cshtml" />
     <Content Include="Views\Personas\Loggedin.cshtml" />
     <Content Include="Views\Personas\LoginOut.cshtml" />
+    <Content Include="Views\Personas\Listado_Usuarios.cshtml" />
+    <Content Include="Views\Personas\Index.cshtml" />
+    <Content Include="Views\Personas\Administrar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
