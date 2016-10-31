@@ -1,0 +1,50 @@
+﻿@model IEnumerable<SREA.Models.Salon>
+
+@{
+    ViewBag.Title = "Salones - Modificar";
+}
+
+<h2>Modificar</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Edificio.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Capacidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>Opciones</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edificio.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Capacidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Salon }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Salon })
+        </td>
+    </tr>
+}
+
+</table>
+
+
+<button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Salones")'">Regresar</button>

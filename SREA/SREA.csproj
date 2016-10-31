@@ -218,6 +218,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Properties\PublishProfiles\tiberio40.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -246,11 +247,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Salones\Create.cshtml" />
-    <Content Include="Views\Salones\Delete.cshtml" />
-    <Content Include="Views\Salones\Details.cshtml" />
-    <Content Include="Views\Salones\Edit.cshtml" />
-    <Content Include="Views\Salones\Index.cshtml" />
     <Content Include="Views\Inventarios\Create.cshtml" />
     <Content Include="Views\Inventarios\Delete.cshtml" />
     <Content Include="Views\Inventarios\Details.cshtml" />
@@ -296,6 +292,10 @@
     <Content Include="Views\Edificios\Create.cshtml" />
     <Content Include="Views\Edificios\Modificar.cshtml" />
     <Content Include="Views\Edificios\Edit.cshtml" />
+    <Content Include="Views\Salones\Index.cshtml" />
+    <Content Include="Views\Salones\Lista.cshtml" />
+    <Content Include="Views\Salones\Modificar.cshtml" />
+    <Content Include="Views\Salones\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

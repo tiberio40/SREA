@@ -17,6 +17,17 @@ namespace SREA.Controllers
         // GET: Salones
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public ActionResult Lista()
+        {
+            var salons = db.Salons.Include(s => s.Edificio);
+            return View(salons.ToList());
+        }
+
+        public ActionResult Modificar()
+        {
             var salons = db.Salons.Include(s => s.Edificio);
             return View(salons.ToList());
         }
@@ -48,7 +59,7 @@ namespace SREA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_Salon,Nombre,Capacidad,ID_Edificio")] Salon salon)
+        public ActionResult Create([Bind(Include = "ID_Salon,Nombre,Capacidad,Descripcion,ID_Edificio")] Salon salon)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +93,7 @@ namespace SREA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_Salon,Nombre,Capacidad,ID_Edificio")] Salon salon)
+        public ActionResult Edit([Bind(Include = "ID_Salon,Nombre,Capacidad,Descripcion,ID_Edificio")] Salon salon)
         {
             if (ModelState.IsValid)
             {

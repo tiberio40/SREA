@@ -1,45 +1,23 @@
-﻿@model IEnumerable<SREA.Models.Salon>
+﻿@model SREA.Models.Salon
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Salones y Laboratorios - Inicio";
 }
 
-<h2>Index</h2>
+<h2>Inicio</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Edificio.Nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Capacidad)
-        </th>
-        <th></th>
-    </tr>
+<h4>Salones y Laboratorios</h4>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Edificio.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Capacidad)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Salon }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_Salon }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Salon })
-        </td>
-    </tr>
-}
+<font>En esta Seccion se podra consultar, ingresar, editar y borrar los Salones y Laboratorios que se encuentran en el campus</font>
+<hr />
+<ul class="list-group">
+    <li class="list-group-item active list-group-item-heading"><span class="glyphicon glyphicon-cog"></span><font color="white"> Salones y Laboratorios</font></li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-list-alt"></span>@Html.ActionLink(" Lista de Salones y Laboratorios", "Lista", "Salones")</li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-pencil"></span>@Html.ActionLink(" Agregar Salones y Laboratorios", "Create", "Salones")</li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-edit"></span>@Html.ActionLink(" Modificar o Eliminar Registro de Salones y Laboratorios", "Modificar", "Salones")</li>
+</ul>
 
-</table>
+<div>
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Administrar", "Personas")'">Regresar</button>
+</div>
+
