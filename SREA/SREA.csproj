@@ -246,11 +246,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Edificios\Create.cshtml" />
-    <Content Include="Views\Edificios\Delete.cshtml" />
-    <Content Include="Views\Edificios\Details.cshtml" />
-    <Content Include="Views\Edificios\Edit.cshtml" />
-    <Content Include="Views\Edificios\Index.cshtml" />
     <Content Include="Views\Salones\Create.cshtml" />
     <Content Include="Views\Salones\Delete.cshtml" />
     <Content Include="Views\Salones\Details.cshtml" />
@@ -296,6 +291,8 @@
     <Content Include="Views\Personas\Listado_Usuarios.cshtml" />
     <Content Include="Views\Personas\Index.cshtml" />
     <Content Include="Views\Personas\Administrar.cshtml" />
+    <Content Include="Views\Edificios\Index.cshtml" />
+    <Content Include="Views\Edificios\Lista.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
