@@ -21,6 +21,7 @@ namespace SREA.Models
 
         public string Email { get; set; }
 
+        [DataType(DataType.Password)]
         public string Clave { get; set; }
 
         public virtual ICollection<Persona> Personas { get; set; }

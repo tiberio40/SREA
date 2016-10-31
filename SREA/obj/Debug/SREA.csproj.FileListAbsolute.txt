@@ -122,4 +122,3 @@ C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA\bin\System.Web.Http.xml
 C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA\bin\System.Web.Http.WebHost.xml
 C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA\obj\Debug\SREA.dll
 C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA\obj\Debug\SREA.pdb
-C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA\obj\Debug\SREA.csprojResolveAssemblyReference.cache

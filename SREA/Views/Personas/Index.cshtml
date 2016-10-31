@@ -15,6 +15,9 @@
             @Html.DisplayNameFor(model => model.Tipo_Usuario.Descripcion)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Nick)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Nombre)
         </th>
         <th>
@@ -38,6 +41,9 @@
             @Html.DisplayFor(modelItem => item.Tipo_Usuario.Descripcion)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Nick)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Nombre)
         </td>
         <td>
@@ -53,9 +59,9 @@
             @Html.DisplayFor(modelItem => item.Clave)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Nick }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Nick }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Nick })
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Persona }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Persona }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Persona })
         </td>
     </tr>
 }

@@ -22,7 +22,7 @@ namespace SREA.Controllers
         }
 
         // GET: Personas/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -48,7 +48,7 @@ namespace SREA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Nick,Nombre,Apellidos,Telefono,Email,Clave,ID_Tipo_Usuario")] Persona persona)
+        public ActionResult Create([Bind(Include = "ID_Persona,Nick,Nombre,Apellidos,Telefono,Email,Clave,ID_Tipo_Usuario")] Persona persona)
         {
             if (ModelState.IsValid)
             {
@@ -62,7 +62,7 @@ namespace SREA.Controllers
         }
 
         // GET: Personas/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -82,7 +82,7 @@ namespace SREA.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Nick,Nombre,Apellidos,Telefono,Email,Clave,ID_Tipo_Usuario")] Persona persona)
+        public ActionResult Edit([Bind(Include = "ID_Persona,Nick,Nombre,Apellidos,Telefono,Email,Clave,ID_Tipo_Usuario")] Persona persona)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace SREA.Controllers
         }
 
         // GET: Personas/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -112,7 +112,7 @@ namespace SREA.Controllers
         // POST: Personas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
             Persona persona = db.Personas.Find(id);
             db.Personas.Remove(persona);
