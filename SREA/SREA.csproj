@@ -170,7 +170,6 @@
     <Compile Include="Controllers\EdificiosController.cs" />
     <Compile Include="Controllers\EquiposController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\InventariosController.cs" />
     <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Controllers\RespuestasController.cs" />
     <Compile Include="Controllers\SalonesController.cs" />
@@ -247,16 +246,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Inventarios\Create.cshtml" />
-    <Content Include="Views\Inventarios\Delete.cshtml" />
-    <Content Include="Views\Inventarios\Details.cshtml" />
-    <Content Include="Views\Inventarios\Edit.cshtml" />
-    <Content Include="Views\Inventarios\Index.cshtml" />
-    <Content Include="Views\Equipos\Create.cshtml" />
-    <Content Include="Views\Equipos\Delete.cshtml" />
-    <Content Include="Views\Equipos\Details.cshtml" />
-    <Content Include="Views\Equipos\Edit.cshtml" />
-    <Content Include="Views\Equipos\Index.cshtml" />
     <Content Include="Views\Solicitudes\Create.cshtml" />
     <Content Include="Views\Solicitudes\Delete.cshtml" />
     <Content Include="Views\Solicitudes\Details.cshtml" />
@@ -296,6 +285,7 @@
     <Content Include="Views\Salones\Lista.cshtml" />
     <Content Include="Views\Salones\Modificar.cshtml" />
     <Content Include="Views\Salones\Edit.cshtml" />
+    <Content Include="Views\Equipos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

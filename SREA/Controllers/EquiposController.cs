@@ -17,6 +17,11 @@ namespace SREA.Controllers
         // GET: Equipos
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public ActionResult Lista()
+        {
             return View(db.Equipoes.ToList());
         }
 

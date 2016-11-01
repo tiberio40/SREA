@@ -1,33 +1,18 @@
-﻿@model IEnumerable<SREA.Models.Equipo>
+﻿@model SREA.Models.Equipo
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Tipo de Equipos - Inicio";
 }
-
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Tipo_Equipo)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tipo_Equipo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Equipo }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_Equipo }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Equipo })
-        </td>
-    </tr>
-}
-
-</table>
+<h2>Inicio</h2>
+<h4>Tipo de Equipos</h4>
+<font>En esta Seccion se podra consultar, ingresar, editar y borrar los Tipo de Equipos que se encuentran en el campus</font>
+<hr />
+<ul class="list-group">
+    <li class="list-group-item active list-group-item-heading"><span class="glyphicon glyphicon-cog"></span><font color="white"> Tipo de Equipos</font></li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-list-alt"></span>@Html.ActionLink(" Lista de Tipo de Equipos", "Lista", "Salones")</li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-pencil"></span>@Html.ActionLink(" Agregar Tipo de Equipos", "Create", "Salones")</li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-edit"></span>@Html.ActionLink(" Modificar o Eliminar Registro de Tipo de Equipos", "Modificar", "Salones")</li>
+</ul>
+<div>
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Administrar", "Personas")'">Regresar</button>
+</div>
