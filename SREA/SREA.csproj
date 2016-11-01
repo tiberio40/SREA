@@ -288,6 +288,8 @@
     <Content Include="Views\Equipos\Index.cshtml" />
     <Content Include="Views\Equipos\Lista.cshtml" />
     <Content Include="Views\Equipos\Create.cshtml" />
+    <Content Include="Views\Equipos\Edit.cshtml" />
+    <Content Include="Views\Equipos\Modificar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -25,6 +25,11 @@ namespace SREA.Controllers
             return View(db.Equipoes.ToList());
         }
 
+        public ActionResult Modificar()
+        {
+            return View(db.Equipoes.ToList());
+        }
+
         // GET: Equipos/Details/5
         public ActionResult Details(int? id)
         {
