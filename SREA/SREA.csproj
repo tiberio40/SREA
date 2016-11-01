@@ -286,6 +286,8 @@
     <Content Include="Views\Salones\Modificar.cshtml" />
     <Content Include="Views\Salones\Edit.cshtml" />
     <Content Include="Views\Equipos\Index.cshtml" />
+    <Content Include="Views\Equipos\Lista.cshtml" />
+    <Content Include="Views\Equipos\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

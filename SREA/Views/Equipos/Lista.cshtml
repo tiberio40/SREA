@@ -1,0 +1,37 @@
+﻿@model IEnumerable<SREA.Models.Equipo>
+
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista</h2>
+
+<table class="table">
+    <tr class="success">
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo_Equipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>Opciones</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo_Equipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.ActionLink("Detalles", "Details", new { id = item.ID_Equipo }) |
+            </td>
+        </tr>
+    }
+
+</table>
+
+<button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Equipos")'">Regresar</button>
