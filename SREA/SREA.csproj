@@ -294,6 +294,8 @@
     <Content Include="Views\Inventarios\Lista.cshtml" />
     <Content Include="Views\Inventarios\Index.cshtml" />
     <Content Include="Views\Inventarios\Create.cshtml" />
+    <Content Include="Views\Inventarios\Modificar.cshtml" />
+    <Content Include="Views\Inventarios\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
