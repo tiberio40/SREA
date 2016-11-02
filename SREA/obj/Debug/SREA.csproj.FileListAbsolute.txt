@@ -182,6 +182,5 @@ C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA\obj\Debug\SREA.pdb
 \\Mac\Home\Documents\Visual Studio 2015\Projects\SREA\SREA\SREA\bin\System.Net.Http.Formatting.xml
 \\Mac\Home\Documents\Visual Studio 2015\Projects\SREA\SREA\SREA\bin\System.Web.Http.xml
 \\Mac\Home\Documents\Visual Studio 2015\Projects\SREA\SREA\SREA\bin\System.Web.Http.WebHost.xml
-\\Mac\Home\Documents\Visual Studio 2015\Projects\SREA\SREA\SREA\obj\Debug\SREA.csprojResolveAssemblyReference.cache
 \\Mac\Home\Documents\Visual Studio 2015\Projects\SREA\SREA\SREA\obj\Debug\SREA.dll
 \\Mac\Home\Documents\Visual Studio 2015\Projects\SREA\SREA\SREA\obj\Debug\SREA.pdb

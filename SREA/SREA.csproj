@@ -170,6 +170,7 @@
     <Compile Include="Controllers\EdificiosController.cs" />
     <Compile Include="Controllers\EquiposController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InventariosController.cs" />
     <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Controllers\RespuestasController.cs" />
     <Compile Include="Controllers\SalonesController.cs" />
@@ -294,6 +295,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Cuenta\" />
+    <Folder Include="Views\Inventarios\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
