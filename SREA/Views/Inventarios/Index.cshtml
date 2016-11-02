@@ -1,0 +1,22 @@
+﻿@model SREA.Models.Inventario
+
+@{
+    ViewBag.Title = "Inventario - Inicio";
+}
+
+<h2>Inicio</h2>
+
+<h4>Inventario</h4>
+
+<font>En esta Seccion se podra consultar, ingresar, editar y borrar los Salones y Laboratorios que se encuentran en el campus</font>
+<hr />
+<ul class="list-group">
+    <li class="list-group-item active list-group-item-heading"><span class="glyphicon glyphicon-cog"></span><font color="white"> Salones y Laboratorios</font></li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-list-alt"></span>@Html.ActionLink(" Listado del Inventario", "Lista", "Inventarios")</li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-pencil"></span>@Html.ActionLink(" Agregar Inventario", "Create", "Inventarios")</li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-edit"></span>@Html.ActionLink(" Modificar o Eliminar Registro del Inventario", "Modificar", "Inventarios")</li>
+</ul>
+
+<div>
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Administrar", "Personas")'">Regresar</button>
+</div>

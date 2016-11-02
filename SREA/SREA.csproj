@@ -291,11 +291,13 @@
     <Content Include="Views\Equipos\Create.cshtml" />
     <Content Include="Views\Equipos\Edit.cshtml" />
     <Content Include="Views\Equipos\Modificar.cshtml" />
+    <Content Include="Views\Inventarios\Lista.cshtml" />
+    <Content Include="Views\Inventarios\Index.cshtml" />
+    <Content Include="Views\Inventarios\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Cuenta\" />
-    <Folder Include="Views\Inventarios\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
