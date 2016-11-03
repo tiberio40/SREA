@@ -28,7 +28,6 @@ namespace SREA.Models
 
         [Display(Name = "Numero Telefonico")]
         [Required(ErrorMessage = "Debes ingresar un {0}")]
-        [Range(1, 100, ErrorMessage = "Debe ingresar un valor de 1 a 100")]
         [RegularExpression("([1-9][0-9]*)", ErrorMessage = "Count must be a natural number")]
         public int Telefono { get; set; }
 
@@ -39,8 +38,6 @@ namespace SREA.Models
         [Display(Name = "Clave")]
         [DataType(DataType.Password)]
         public string Clave { get; set; }
-
-        public virtual ICollection<Persona> Personas { get; set; }
 
         public virtual ICollection<Solicitud> Solicitud { get; set; }
 

@@ -17,7 +17,7 @@ namespace SREA.Controllers
         // GET: Personas
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Administrar", "Personas");
         }
 
         public ActionResult Administrar()
@@ -42,6 +42,26 @@ namespace SREA.Controllers
         }
 
         public ActionResult Listado_Usuarios()
+        {
+            try
+            {
+                if (Session["Privilegio"].Equals("3"))
+                {
+                    var personas = db.Personas.Include(p => p.Tipo_Usuario);
+                    return View(personas.ToList());
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+        }
+
+        public ActionResult Modificar()
         {
             try
             {
