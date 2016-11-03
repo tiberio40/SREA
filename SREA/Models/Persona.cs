@@ -11,16 +11,34 @@ namespace SREA.Models
         [Key]
         public int ID_Persona { get; set; }
 
+        [Display(Name = "Nombre de Usuario")]
+        [Required(ErrorMessage = "Debes ingresar un {0}")]
+        [StringLength(30, ErrorMessage = "El campo {0} debe estar entre {2} y {1} carácteres", MinimumLength = 3)]
         public string Nick { get; set; }
-        
+
+        [Display(Name = "Nombre")]
+        [Required(ErrorMessage = "Debes ingresar un {0}")]
+        [StringLength(30, ErrorMessage = "El campo {0} debe estar entre {2} y {1} carácteres", MinimumLength = 3)]
         public string Nombre { get; set; }
 
+        [Display(Name = "Apellidos")]
+        [Required(ErrorMessage = "Debes ingresar un {0}")]
+        [StringLength(30, ErrorMessage = "El campo {0} debe estar entre {2} y {1} carácteres", MinimumLength = 3)]
         public string Apellidos { get; set; }
 
-        public string Telefono { get; set; }
+        [Display(Name = "Numero Telefonico")]
+        [Required(ErrorMessage = "Debes ingresar un {0}")]
+        [Range(1, 100, ErrorMessage = "Debe ingresar un valor de 1 a 100")]
+        [RegularExpression("([1-9][0-9]*)", ErrorMessage = "Count must be a natural number")]
+        public int Telefono { get; set; }
 
+        [Display(Name = "Apellidos")]
+        [DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "Debes ingresar un {0}")]
+        [StringLength(30, ErrorMessage = "El campo {0} debe estar entre {2} y {1} carácteres", MinimumLength = 3)]
         public string Email { get; set; }
 
+        [Display(Name = "Correo Electronico")]
         [DataType(DataType.Password)]
         public string Clave { get; set; }
 

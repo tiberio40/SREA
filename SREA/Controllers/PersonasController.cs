@@ -43,8 +43,22 @@ namespace SREA.Controllers
 
         public ActionResult Listado_Usuarios()
         {
-            var personas = db.Personas.Include(p => p.Tipo_Usuario);
-            return View(personas.ToList());
+            try
+            {
+                if (Session["Privilegio"].Equals("3"))
+                {
+                    var personas = db.Personas.Include(p => p.Tipo_Usuario);
+                    return View(personas.ToList());
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         // GET: Personas/Details/5
@@ -65,8 +79,23 @@ namespace SREA.Controllers
         // GET: Personas/Create
         public ActionResult Create()
         {
-            ViewBag.ID_Tipo_Usuario = new SelectList(db.Tipo_Usuario, "ID_Tipo_Usuario", "Descripcion");
-            return View();
+            try
+            {
+                if (Session["Privilegio"].Equals("3"))
+                {
+                    ViewBag.ID_Tipo_Usuario = new SelectList(db.Tipo_Usuario, "ID_Tipo_Usuario", "Descripcion");
+                    return View();
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            
         }
 
         // POST: Personas/Create
@@ -76,15 +105,29 @@ namespace SREA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID_Persona,Nick,Nombre,Apellidos,Telefono,Email,Clave,ID_Tipo_Usuario")] Persona persona)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Personas.Add(persona);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+                if (Session["Privilegio"].Equals("3"))
+                {
+                    if (ModelState.IsValid)
+                    {
+                        db.Personas.Add(persona);
+                        db.SaveChanges();
+                        return RedirectToAction("Index");
+                    }
 
-            ViewBag.ID_Tipo_Usuario = new SelectList(db.Tipo_Usuario, "ID_Tipo_Usuario", "Descripcion", persona.ID_Tipo_Usuario);
-            return View(persona);
+                    ViewBag.ID_Tipo_Usuario = new SelectList(db.Tipo_Usuario, "ID_Tipo_Usuario", "Descripcion", persona.ID_Tipo_Usuario);
+                    return View(persona);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         // GET: Personas/Edit/5
@@ -123,16 +166,31 @@ namespace SREA.Controllers
         // GET: Personas/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (id == null)
+            try
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                if (Session["Privilegio"].Equals("3"))
+                {
+                    if (id == null)
+                    {
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    }
+                    Persona persona = db.Personas.Find(id);
+                    if (persona == null)
+                    {
+                        return HttpNotFound();
+                    }
+                    return View(persona);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
             }
-            Persona persona = db.Personas.Find(id);
-            if (persona == null)
+            catch (Exception e)
             {
-                return HttpNotFound();
+                return RedirectToAction("Index", "Home");
             }
-            return View(persona);
+            
         }
 
         // POST: Personas/Delete/5
@@ -140,10 +198,24 @@ namespace SREA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Persona persona = db.Personas.Find(id);
-            db.Personas.Remove(persona);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                if (Session["Privilegio"].Equals("3"))
+                {
+                    Persona persona = db.Personas.Find(id);
+                    db.Personas.Remove(persona);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Index", "Home");
+            }            
         }
 
         protected override void Dispose(bool disposing)
