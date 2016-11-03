@@ -32,13 +32,11 @@ namespace SREA.Models
         [RegularExpression("([1-9][0-9]*)", ErrorMessage = "Count must be a natural number")]
         public int Telefono { get; set; }
 
-        [Display(Name = "Apellidos")]
+        [Display(Name = "Correo Electronico")]
         [DataType(DataType.EmailAddress)]
-        [Required(ErrorMessage = "Debes ingresar un {0}")]
-        [StringLength(30, ErrorMessage = "El campo {0} debe estar entre {2} y {1} carácteres", MinimumLength = 3)]
         public string Email { get; set; }
 
-        [Display(Name = "Correo Electronico")]
+        [Display(Name = "Clave")]
         [DataType(DataType.Password)]
         public string Clave { get; set; }
 
