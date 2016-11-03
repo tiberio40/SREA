@@ -33,8 +33,7 @@
                         <ul class="dropdown-menu">
                           <li>@Html.ActionLink("Listado del Espacio Academico", "Lista", "Salones")</li>
                           <li>@Html.ActionLink("Espacio Academico Apartado", "Lista", "Salones")</li>
-                          <li>@Html.ActionLink("Opciones del Espacio Academico", "Index", "Solicitudes")</li>
-                            @if (Session["ID_Persona"] != null)
+                          @if (Session["ID_Persona"] != null)
                             {
                                 <li>@Html.ActionLink("Opciones del Espacio Academico", "Index", "Solicitudes")</li>
                                 <li>@Html.ActionLink("Consulta mis Espacios Academicos", "Index", "Solicitudes")</li>
