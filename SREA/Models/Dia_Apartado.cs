@@ -15,9 +15,14 @@ namespace SREA.Models
         [DataType(DataType.Date)]
         public DateTime Fecha_Apartada { get; set; }
 
-        [Display(Name = "Fecha en que desea reservar")]
+        [Display(Name = "Hora de Inicio")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh:mm tt}")]
+        [DataType(DataType.Time)]
         public DateTime Hora_Comienzo { get; set; }
 
+        [Display(Name = "Hora de Finalización")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh:mm tt}")]
+        [DataType(DataType.Time)]
         public DateTime Hora_Terminado { get; set; }
 
         public int ID_Solicitud { get; set; }

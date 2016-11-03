@@ -1,0 +1,18 @@
+﻿@model SREA.Models.Dia_Apartado
+
+@{
+    ViewBag.Title = "Dias de Reserva - Inicio";
+}
+<h2>Inicio</h2>
+<h4>Tipo de Equipos</h4>
+<font>En esta Seccion se podra consultar, ingresar, editar y borrar los dias que ha reservado</font>
+<hr />
+<ul class="list-group">
+    <li class="list-group-item active list-group-item-heading"><span class="glyphicon glyphicon-cog"></span><font color="white"> Dia de Reserva</font></li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-list-alt"></span>@Html.ActionLink(" Lista Dias Reservados", "Lista", "Dia_Apartado")</li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-pencil"></span>@Html.ActionLink(" Agregar Dias Reservados", "Create", "Dia_Apartado")</li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-edit"></span>@Html.ActionLink(" Modificar o Eliminar Registro de Dias Reservados", "Modificar", "Dia_Apartado")</li>
+</ul>
+<div>
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Administrar", "Personas")'">Regresar</button>
+</div>

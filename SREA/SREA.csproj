@@ -166,6 +166,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Dia_ApartadoController.cs" />
     <Compile Include="Controllers\EdificiosController.cs" />
     <Compile Include="Controllers\EquiposController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -292,6 +293,10 @@
     <Content Include="Views\Solicitudes\Edit.cshtml" />
     <Content Include="Views\Solicitudes\Delete.cshtml" />
     <Content Include="Views\Salones\Create.cshtml" />
+    <Content Include="Views\Dia_Apartado\Create.cshtml" />
+    <Content Include="Views\Dia_Apartado\Index.cshtml" />
+    <Content Include="Views\Dia_Apartado\Lista.cshtml" />
+    <Content Include="Views\Dia_Apartado\Modificar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
