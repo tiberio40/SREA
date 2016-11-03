@@ -22,7 +22,23 @@ namespace SREA.Controllers
 
         public ActionResult Administrar()
         {
-            return View();
+            try
+            {
+                if (Session["Privilegio"].Equals("3"))
+                {
+                    return View();
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+            catch(Exception e)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            
+            
         }
 
         public ActionResult Listado_Usuarios()
