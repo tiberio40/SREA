@@ -37,6 +37,7 @@ namespace SREA.Models
 
         [Display(Name = "Clave")]
         [DataType(DataType.Password)]
+        [StringLength(30, ErrorMessage = "El campo {0} debe estar entre {2} y {1} carácteres", MinimumLength = 8)]
         public string Clave { get; set; }
 
         public virtual ICollection<Solicitud> Solicitud { get; set; }

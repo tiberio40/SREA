@@ -11,8 +11,11 @@ namespace SREA.Models
         [Key]
         public int ID_Dia_Apartado { get; set; }
 
+        [Display(Name = "Fecha en que desea reservar")]
+        [DataType(DataType.Date)]
         public DateTime Fecha_Apartada { get; set; }
 
+        [Display(Name = "Fecha en que desea reservar")]
         public DateTime Hora_Comienzo { get; set; }
 
         public DateTime Hora_Terminado { get; set; }
