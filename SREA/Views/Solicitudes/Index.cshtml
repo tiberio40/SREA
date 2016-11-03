@@ -1,0 +1,22 @@
+﻿@model SREA.Models.Solicitud
+
+@{
+    ViewBag.Title = "Solicitudes - Inicio";
+}
+
+<h2>Incio</h2>
+
+<h4>Solicitud para apartar el espacio academico</h4>
+
+<font>En esta Seccion se podra consultar, ingresar, editar y borrar las solicitudes para el espacio academico.</font>
+<hr />
+<ul class="list-group">
+    <li class="list-group-item active list-group-item-heading"><span class="glyphicon glyphicon-cog"></span><font color="white"> Solicitudes</font></li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-list-alt"></span>@Html.ActionLink(" Lista de Solicitudes", "Lista", "Solicitudes")</li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-pencil"></span>@Html.ActionLink(" Enviar Solicitud", "Create", "Solicitudes")</li>
+    <li class="list-group-item"><span class="glyphicon glyphicon-edit"></span>@Html.ActionLink(" Modificar o EliminarS Solicitudes", "Modificar", "Salones")</li>
+</ul>
+
+<div>
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Administrar", "Personas")'">Regresar</button>
+</div>

@@ -172,6 +172,7 @@
     <Compile Include="Controllers\InventariosController.cs" />
     <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Controllers\SalonesController.cs" />
+    <Compile Include="Controllers\SolicitudesController.cs" />
     <Compile Include="Controllers\Tipo_UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -283,6 +284,9 @@
     <Content Include="Views\Inventarios\Create.cshtml" />
     <Content Include="Views\Inventarios\Modificar.cshtml" />
     <Content Include="Views\Inventarios\Edit.cshtml" />
+    <Content Include="Views\Solicitudes\Index.cshtml" />
+    <Content Include="Views\Solicitudes\Lista.cshtml" />
+    <Content Include="Views\Solicitudes\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
