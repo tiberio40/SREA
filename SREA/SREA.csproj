@@ -288,6 +288,9 @@
     <Content Include="Views\Solicitudes\Lista.cshtml" />
     <Content Include="Views\Solicitudes\Create.cshtml" />
     <Content Include="Views\Personas\Modificar.cshtml" />
+    <Content Include="Views\Solicitudes\Modificar.cshtml" />
+    <Content Include="Views\Solicitudes\Edit.cshtml" />
+    <Content Include="Views\Solicitudes\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

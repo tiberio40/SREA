@@ -28,10 +28,25 @@ namespace SREA.Controllers
 
         public ActionResult Modificar()
         {
-            var solicituds = db.Solicituds.Include(s => s.Persona).Include(s => s.Salon);
-            return View(solicituds.ToList());
-        }
+            try
+            {
+                if (Session["ID_Persona"] != null)
+                {
+                    var solicituds = db.Solicituds.Include(s => s.Persona).Include(s => s.Salon);
+                    return View(solicituds.ToList());
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Home");
 
+                }
+            }catch(Exception e)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            
+        }
+        //.Where(x => x.ID_Persona == (int)Session["ID_Persona"])
         // GET: Solicitudes/Details/5
         public ActionResult Details(int? id)
         {
@@ -103,18 +118,26 @@ namespace SREA.Controllers
         // GET: Solicitudes/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (id == null)
+            if (Session["Nick"] == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return RedirectToAction("Index", "Home");
             }
-            Solicitud solicitud = db.Solicituds.Find(id);
-            if (solicitud == null)
+            else
             {
-                return HttpNotFound();
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Solicitud solicitud = db.Solicituds.Find(id);
+                if (solicitud == null)
+                {
+                    return HttpNotFound();
+                }
+                ViewBag.ID_Persona = new SelectList(db.Personas, "ID_Persona", "Nick", solicitud.ID_Persona);
+                ViewBag.ID_Salon = new SelectList(db.Salons, "ID_Salon", "Nombre", solicitud.ID_Salon);
+                return View(solicitud);
             }
-            ViewBag.ID_Persona = new SelectList(db.Personas, "ID_Persona", "Nick", solicitud.ID_Persona);
-            ViewBag.ID_Salon = new SelectList(db.Salons, "ID_Salon", "Nombre", solicitud.ID_Salon);
-            return View(solicitud);
+           
         }
 
         // POST: Solicitudes/Edit/5
@@ -124,15 +147,34 @@ namespace SREA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID_Solicitud,Tema,Cantidad_Inscritos,Fecha_Solicitud,Estado,ID_Salon,ID_Persona")] Solicitud solicitud)
         {
-            if (ModelState.IsValid)
+            if (Session["Nick"] == null)
             {
-                db.Entry(solicitud).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }
-            ViewBag.ID_Persona = new SelectList(db.Personas, "ID_Persona", "Nick", solicitud.ID_Persona);
-            ViewBag.ID_Salon = new SelectList(db.Salons, "ID_Salon", "Nombre", solicitud.ID_Salon);
-            return View(solicitud);
+            else
+            {
+                if (ModelState.IsValid)
+                {
+
+                    if (Session["Privilegio"].Equals("3"))
+                    {
+                        db.Entry(solicitud).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        solicitud.ID_Persona = Convert.ToInt16(Session["ID_Persona"]);
+                        solicitud.Estado = false;
+                        db.Entry(solicitud).State = EntityState.Modified;
+                    }
+                    db.Entry(solicitud).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                ViewBag.ID_Persona = new SelectList(db.Personas, "ID_Persona", "Nick", solicitud.ID_Persona);
+                ViewBag.ID_Salon = new SelectList(db.Salons, "ID_Salon", "Nombre", solicitud.ID_Salon);
+                return View(solicitud);
+            }
+           
         }
 
         // GET: Solicitudes/Delete/5

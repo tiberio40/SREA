@@ -1,0 +1,97 @@
+﻿@model IEnumerable<SREA.Models.Solicitud>
+
+@{
+    ViewBag.Title = "Solicitud - Modificar O Eliminar";
+}
+
+<h2>Modificar o Eliminar Reservas Academicas</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Persona.Nick)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salon.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tema)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cantidad_Inscritos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha_Solicitud)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>Opciones</th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    if (Session["Privilegio"].Equals("3"))
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Persona.Nick)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salon.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tema)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad_Inscritos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha_Solicitud)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.ID_Solicitud }) |
+                @Html.ActionLink("Borrar", "Delete", new { id = item.ID_Solicitud })
+            </td>
+        </tr>
+    }
+    else
+    {
+        if (item.ID_Persona == Convert.ToInt16(Session["ID_Persona"]))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Persona.Nick)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salon.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tema)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cantidad_Inscritos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha_Solicitud)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.ID_Solicitud }) |
+                    @Html.ActionLink("Borrar", "Delete", new { id = item.ID_Solicitud })
+                </td>
+            </tr>
+        }
+    }
+
+
+}
+
+</table>
+
+<button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Solicitudes")'">Regresar</button>
