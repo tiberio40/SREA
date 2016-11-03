@@ -14,7 +14,7 @@
             <img src="~/Content/img/encabezado.jpg" style="width: 70%;" />
         </div>
     </div>
-    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #A0C4A0; position: relative;">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #003b36; position: relative;">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -22,12 +22,28 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav ">
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Lista de Salones", "About", "Home")</li>
+                    <li>@Html.ActionLink("Como Funciona", "About", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Salones<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li>@Html.ActionLink("Listado del Espacio Academico", "Lista", "Salones")</li>
+                          <li>@Html.ActionLink("Espacio Academico Apartado", "Lista", "Salones")</li>
+                          <li>@Html.ActionLink("Opciones del Espacio Academico", "Index", "Solicitudes")</li>
+                            @if (Session["ID_Persona"] != null)
+                            {
+                                <li>@Html.ActionLink("Opciones del Espacio Academico", "Index", "Solicitudes")</li>
+                                <li>@Html.ActionLink("Consulta mis Espacios Academicos", "Index", "Solicitudes")</li>
+                                <li>@Html.ActionLink("Respuesta por el Administrador", "Index", "Solicitudes")</li>
+
+                            }
+                        </ul>
+                    </li>
+
                     <li>@Html.ActionLink("Quienes Somos", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Cuenta", "Contact", "Home")</li>
                     @if (Session["ID_Persona"] == null)
