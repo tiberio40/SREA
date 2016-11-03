@@ -297,6 +297,8 @@
     <Content Include="Views\Dia_Apartado\Index.cshtml" />
     <Content Include="Views\Dia_Apartado\Lista.cshtml" />
     <Content Include="Views\Dia_Apartado\Modificar.cshtml" />
+    <Content Include="Views\Dia_Apartado\Edit.cshtml" />
+    <Content Include="Views\Dia_Apartado\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

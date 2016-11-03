@@ -1,0 +1,58 @@
+﻿@model SREA.Models.Dia_Apartado
+
+@{
+    ViewBag.Title = "Dia de Reservas - Borrar";
+}
+
+<h2>Delete</h2>
+
+<h3>¿Esta seguro que quiere eliminar este dia de Reserva?</h3>
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Solicitud.Tema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Solicitud.Tema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Apartada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Apartada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora_Comienzo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hora_Comienzo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora_Terminado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hora_Terminado)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+        </div>
+    }
+</div>
+
+<div>
+    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Dia_Apartado")'">Regresar</button>
+</div>
