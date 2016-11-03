@@ -291,6 +291,7 @@
     <Content Include="Views\Solicitudes\Modificar.cshtml" />
     <Content Include="Views\Solicitudes\Edit.cshtml" />
     <Content Include="Views\Solicitudes\Delete.cshtml" />
+    <Content Include="Views\Salones\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
