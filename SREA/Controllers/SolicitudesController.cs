@@ -104,7 +104,7 @@ namespace SREA.Controllers
                     }
                     
                     db.SaveChanges();
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Create", "Dia_Apartado");
                 }
 
                 ViewBag.ID_Persona = new SelectList(db.Personas, "ID_Persona", "Nick", solicitud.ID_Persona);

@@ -278,7 +278,7 @@ namespace SREA.Controllers
             }
             else
             {
-                ModelState.AddModelError("", "Username or Password estan mal");
+                ModelState.AddModelError("", "Usuario o la contraseña estan mal digitados o no existen");
             }
             return View();
         }

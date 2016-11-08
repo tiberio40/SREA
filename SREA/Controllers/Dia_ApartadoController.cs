@@ -20,6 +20,11 @@ namespace SREA.Controllers
             return View();
         }
 
+        public ActionResult Error()
+        {
+            return View();
+        }
+
         public ActionResult Lista()
         {
             var dia_Apartado = db.Dia_Apartado.Include(d => d.Solicitud);
@@ -63,9 +68,30 @@ namespace SREA.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Dia_Apartado.Add(dia_Apartado);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                var consultaDia = db.Dia_Apartado.Where(x => x.Fecha_Apartada == dia_Apartado.Fecha_Apartada);
+                if (consultaDia == null)
+                {
+                    db.Dia_Apartado.Add(dia_Apartado);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    var fechaInicio = db.Dia_Apartado.Where(x => x.Hora_Comienzo >= dia_Apartado.Hora_Comienzo && x.Hora_Terminado <= dia_Apartado.Hora_Comienzo);
+                    /*var fechaInicio = db.Dia_Apartado.Where(x => x.Hora_Comienzo >= dia_Apartado.Hora_Comienzo);
+                    var fechaTerminado = db.Dia_Apartado.Where(x => x.Hora_Terminado <= dia_Apartado.Hora_Comienzo);*/
+                    if (fechaInicio == null)
+                    {
+                        db.Dia_Apartado.Add(dia_Apartado);
+                        db.SaveChanges();
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Ya existe un espacio academico para esa fecha");
+                    }
+                }
+                
             }
 
             ViewBag.ID_Solicitud = new SelectList(db.Solicituds, "ID_Solicitud", "Tema", dia_Apartado.ID_Solicitud);
