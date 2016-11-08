@@ -36,15 +36,15 @@
                           @if (Session["ID_Persona"] != null)
                             {
                                 <li>@Html.ActionLink("Opciones del Espacio Academico", "Index", "Solicitudes")</li>
-                                <li>@Html.ActionLink("Consulta mis Espacios Academicos", "Index", "Solicitudes")</li>
+                                <li>@Html.ActionLink("Dia de Reserva", "Index", "Dia_Apartado")</li>
                                 <li>@Html.ActionLink("Respuesta por el Administrador", "Index", "Solicitudes")</li>
+                                
 
-                            }
+                          }
                         </ul>
                     </li>
 
                     <li>@Html.ActionLink("Quienes Somos", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Cuenta", "Contact", "Home")</li>
                     @if (Session["ID_Persona"] == null)
                     {
                         <li>@Html.ActionLink("Login", "Login", "Personas")</li>
