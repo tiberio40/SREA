@@ -17,9 +17,21 @@ namespace SREA.Controllers
         private SREAContext db = new SREAContext();
 
         // GET: api/EdificiosApi
-        public IQueryable<Edificio> GetEdificios()
+        public List<Edificio> GetEdificios()
         {
-            return db.Edificios;
+            int i = 0;
+            List<Edificio> listaConsultada = new List<Edificio>();
+            Edificio consulta = new Edificio();
+            foreach (Edificio c in db.Edificios)
+            {
+                listaConsultada.Add(new Edificio());
+                listaConsultada[i].ID_Edificio = c.ID_Edificio;
+                listaConsultada[i].Nombre = c.Nombre;
+                //listaConsultada.Add(consulta);
+                i++;
+            }
+            return listaConsultada;
+         
         }
 
         // GET: api/EdificiosApi/5
