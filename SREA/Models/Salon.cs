@@ -25,6 +25,9 @@ namespace SREA.Models
         [Display(Name = "Descripción del Salon")]
         public string Descripcion { get; set; }
 
+        
+        //public byte[] Imagen { get; set; }
+
         [Display(Name = "Nombre del Edificio")]
         public int ID_Edificio { get; set; }
         public virtual Edificio Edificio { get; set; }

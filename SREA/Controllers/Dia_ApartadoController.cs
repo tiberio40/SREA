@@ -68,8 +68,8 @@ namespace SREA.Controllers
         {
             if (ModelState.IsValid)
             {
-                var consultaDia = db.Dia_Apartado.Where(x => x.Fecha_Apartada == dia_Apartado.Fecha_Apartada);
-                if (consultaDia == null)
+                var consultaDia = db.Dia_Apartado.Where(x => x.Fecha_Apartada == dia_Apartado.Fecha_Apartada).FirstOrDefault();
+                if (consultaDia==null)
                 {
                     db.Dia_Apartado.Add(dia_Apartado);
                     db.SaveChanges();
@@ -77,19 +77,28 @@ namespace SREA.Controllers
                 }
                 else
                 {
-                    var fechaInicio = db.Dia_Apartado.Where(x => x.Hora_Comienzo >= dia_Apartado.Hora_Comienzo && x.Hora_Terminado <= dia_Apartado.Hora_Comienzo);
-                    /*var fechaInicio = db.Dia_Apartado.Where(x => x.Hora_Comienzo >= dia_Apartado.Hora_Comienzo);
-                    var fechaTerminado = db.Dia_Apartado.Where(x => x.Hora_Terminado <= dia_Apartado.Hora_Comienzo);*/
-                    if (fechaInicio == null)
+                    var fechaInicio = db.Dia_Apartado.Where(x => x.Hora_Comienzo >= dia_Apartado.Hora_Comienzo && x.Hora_Terminado <= dia_Apartado.Hora_Comienzo).FirstOrDefault();
+                    if (dia_Apartado.Hora_Comienzo >= dia_Apartado.Hora_Terminado)
                     {
-                        db.Dia_Apartado.Add(dia_Apartado);
-                        db.SaveChanges();
-                        return RedirectToAction("Index");
+                        ModelState.AddModelError("", "La hora de inicio es mayor a la de finalizacion");
                     }
-                    else
+                    List<Dia_Apartado> consulta = new List<Dia_Apartado>();
+                    foreach (var sql in db.Dia_Apartado)
                     {
-                        ModelState.AddModelError("", "Ya existe un espacio academico para esa fecha");
+                        if ((dia_Apartado.Hora_Comienzo < sql.Hora_Comienzo && dia_Apartado.Hora_Terminado > sql.Hora_Terminado) 
+                            || (dia_Apartado.Hora_Terminado < sql.Hora_Comienzo) || dia_Apartado.Hora_Comienzo > sql.Hora_Terminado)
+                        {
+                            db.Dia_Apartado.Add(dia_Apartado);
+                            db.SaveChanges();
+                            return RedirectToAction("Index");
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "Ya existe un espacio academico para esa fecha");
+                            break;
+                        }
                     }
+                   
                 }
                 
             }

@@ -52,6 +52,10 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.10\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Json.NET.Web, Version=1.0.49.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Json.NET.Web.1.0.49\lib\portable45-net45+win8+wpa81\Json.NET.Web.dll</HintPath>
       <Private>True</Private>
@@ -91,6 +95,10 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rotativa.1.6.4\lib\net40\Rotativa.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -181,6 +189,7 @@
     <Compile Include="Controllers\PersonasApiController.cs" />
     <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Controllers\SalonesController.cs" />
+    <Compile Include="Controllers\SalonsPruebaController.cs" />
     <Compile Include="Controllers\SolicitudesController.cs" />
     <Compile Include="Controllers\Tipo_UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
@@ -215,6 +224,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\19882_581bdc3d89943 %282%29.jpg" />
+    <Content Include="Rotativa\wkhtmltopdf.exe" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -229,6 +240,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="App_Browsers\qt.browser" />
     <None Include="Properties\PublishProfiles\tiberio40.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -311,6 +323,11 @@
     <Content Include="Views\Dia_Apartado\Modificar.cshtml" />
     <Content Include="Views\Dia_Apartado\Edit.cshtml" />
     <Content Include="Views\Dia_Apartado\Delete.cshtml" />
+    <Content Include="Views\SalonsPrueba\Create.cshtml" />
+    <Content Include="Views\SalonsPrueba\Delete.cshtml" />
+    <Content Include="Views\SalonsPrueba\Details.cshtml" />
+    <Content Include="Views\SalonsPrueba\Edit.cshtml" />
+    <Content Include="Views\SalonsPrueba\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
