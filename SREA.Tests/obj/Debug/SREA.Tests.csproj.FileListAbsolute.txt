@@ -141,3 +141,4 @@ C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA.Tests\obj\Debug\SREA.Test
 \\Mac\Home\Documents\Visual Studio 2015\Projects\SREA\SREA\SREA.Tests\obj\Debug\SREA.Tests.pdb
 C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA.Tests\bin\Debug\itextsharp.dll
 C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA.Tests\bin\Debug\itextsharp.xml
+C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA.Tests\bin\Debug\Rotativa.dll

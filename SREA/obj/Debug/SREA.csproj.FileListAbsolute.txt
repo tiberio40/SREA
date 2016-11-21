@@ -188,5 +188,4 @@ C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA\obj\Debug\SREA.pdb
 C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA\bin\Json.NET.Web.dll
 C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA\bin\itextsharp.dll
 C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA\bin\itextsharp.xml
-C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA\obj\Debug\SREA.csprojResolveAssemblyReference.cache
 C:\Users\Laurent Castañeda\Documents\GitHub\SREA\SREA\bin\Rotativa.dll

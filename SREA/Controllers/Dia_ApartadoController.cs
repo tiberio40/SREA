@@ -92,13 +92,10 @@ namespace SREA.Controllers
                             db.SaveChanges();
                             return RedirectToAction("Index");
                         }
-                        else
-                        {
-                            ModelState.AddModelError("", "Ya existe un espacio academico para esa fecha");
-                            break;
-                        }
+                       
                     }
-                   
+                    ModelState.AddModelError("", "Ya existe un espacio academico para esa fecha");
+
                 }
                 
             }

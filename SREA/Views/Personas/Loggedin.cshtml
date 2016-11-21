@@ -3,10 +3,17 @@
     ViewBag.Title = "Loggedin";
 }
 
-<h2>Loggedin</h2>
 
 @if (Session["ID_Persona"] != null)
 {
-    <h4>hola @Session["Nick"].ToString()</h4>
+    <h3>Hola @Session["Nick"].ToString()</h3>
 }
+<br />
+<h4>No se te olvide <b>Finalizar la Seción</b> por segurar antes de irte. </h4>
+<br />
+<center>
+    <img src="~/img/password.jpg" alt="" width="300" />
+</center>
+
+
 

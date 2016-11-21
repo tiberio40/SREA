@@ -93,18 +93,37 @@ namespace SREA.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    var consulta = db.Salons.Find(solicitud.ID_Salon);
+                    
                     if (Session["Privilegio"].Equals("3"))
                     {
-                        db.Solicituds.Add(solicitud);
+                        if (consulta.Capacidad >= solicitud.Cantidad_Inscritos)
+                        {
+                            db.Solicituds.Add(solicitud);
+                            db.SaveChanges();
+                            return RedirectToAction("Create", "Dia_Apartado");
+                        }
+                        
                     }
                     else
                     {
-                        db.Solicituds.Add(solicitud).ID_Persona = Convert.ToInt16(Session["ID_Persona"]);
-                        db.Solicituds.Add(solicitud).Estado = false;
+                       
+
+                        if (consulta.Capacidad >= solicitud.Cantidad_Inscritos)
+                        {
+                            db.Solicituds.Add(solicitud).ID_Persona = Convert.ToInt16(Session["ID_Persona"]);
+                            db.Solicituds.Add(solicitud).Estado = false;
+                            db.SaveChanges();
+                            return RedirectToAction("Create", "Dia_Apartado");
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "Salon no tiene esa capacidad");
+                        }
+                        
                     }
                     
-                    db.SaveChanges();
-                    return RedirectToAction("Create", "Dia_Apartado");
+                    
                 }
 
                 ViewBag.ID_Persona = new SelectList(db.Personas, "ID_Persona", "Nick", solicitud.ID_Persona);

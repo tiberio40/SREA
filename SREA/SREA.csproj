@@ -179,6 +179,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ContactenosController.cs" />
     <Compile Include="Controllers\Dia_ApartadoController.cs" />
     <Compile Include="Controllers\EdificiosApiController.cs" />
     <Compile Include="Controllers\EdificiosController.cs" />
@@ -186,7 +187,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventariosController.cs" />
     <Compile Include="Controllers\JSonResult.cs" />
-    <Compile Include="Controllers\PersonasApiController.cs" />
     <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Controllers\SalonesController.cs" />
     <Compile Include="Controllers\SalonsPruebaController.cs" />
@@ -196,6 +196,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Contacto.cs" />
     <Compile Include="Models\Dia_Apartado.cs" />
     <Compile Include="Models\Edificio.cs" />
     <Compile Include="Models\Equipo.cs" />
@@ -225,6 +226,10 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="img\19882_581bdc3d89943 %282%29.jpg" />
+    <Content Include="img\jhonattan.jpg" />
+    <Content Include="img\Laurent.jpg" />
+    <Content Include="img\alomia.jpg" />
+    <Content Include="img\password.jpg" />
     <Content Include="Rotativa\wkhtmltopdf.exe" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
@@ -328,6 +333,12 @@
     <Content Include="Views\SalonsPrueba\Details.cshtml" />
     <Content Include="Views\SalonsPrueba\Edit.cshtml" />
     <Content Include="Views\SalonsPrueba\Index.cshtml" />
+    <Content Include="Views\Contactenos\Create.cshtml" />
+    <Content Include="Views\Contactenos\Delete.cshtml" />
+    <Content Include="Views\Contactenos\Details.cshtml" />
+    <Content Include="Views\Contactenos\Edit.cshtml" />
+    <Content Include="Views\Contactenos\Index.cshtml" />
+    <Content Include="Views\Salones\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

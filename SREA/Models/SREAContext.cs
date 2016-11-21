@@ -38,5 +38,7 @@ namespace SREA.Models
         public System.Data.Entity.DbSet<SREA.Models.Tipo_Usuario> Tipo_Usuario { get; set; }
 
         public System.Data.Entity.DbSet<SREA.Models.Usuario> Usuarios { get; set; }
+
+        public System.Data.Entity.DbSet<SREA.Models.Contacto> Contactoes { get; set; }
     }
 }

@@ -99,23 +99,25 @@ namespace SREA.Controllers
         // GET: Personas/Create
         public ActionResult Create()
         {
-            try
-            {
-                if (Session["Privilegio"].Equals("3"))
-                {
-                    ViewBag.ID_Tipo_Usuario = new SelectList(db.Tipo_Usuario, "ID_Tipo_Usuario", "Descripcion");
-                    return View();
-                }
-                else
-                {
-                    return RedirectToAction("Index", "Home");
-                }
-            }
-            catch (Exception e)
-            {
-                return RedirectToAction("Index", "Home");
-            }
-            
+            ViewBag.ID_Tipo_Usuario = new SelectList(db.Tipo_Usuario, "ID_Tipo_Usuario", "Descripcion");
+            return View();
+            /* try
+             {
+                 if (Session["Privilegio"].Equals("3"))
+                 {
+                     ViewBag.ID_Tipo_Usuario = new SelectList(db.Tipo_Usuario, "ID_Tipo_Usuario", "Descripcion");
+                     return View();
+                 }
+                 else
+                 {
+                     return RedirectToAction("Index", "Home");
+                 }
+             }
+             catch (Exception e)
+             {
+                 return RedirectToAction("Index", "Home");
+             }*/
+
         }
 
         // POST: Personas/Create
@@ -125,7 +127,16 @@ namespace SREA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID_Persona,Nick,Nombre,Apellidos,Telefono,Email,Clave,ID_Tipo_Usuario")] Persona persona)
         {
-            try
+            if (ModelState.IsValid)
+            {
+                db.Personas.Add(persona);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.ID_Tipo_Usuario = new SelectList(db.Tipo_Usuario, "ID_Tipo_Usuario", "Descripcion", persona.ID_Tipo_Usuario);
+            return View(persona);
+            /*ry
             {
                 if (Session["Privilegio"].Equals("3"))
                 {
@@ -147,7 +158,7 @@ namespace SREA.Controllers
             catch (Exception e)
             {
                 return RedirectToAction("Index", "Home");
-            }
+            }*/
         }
 
         // GET: Personas/Edit/5
