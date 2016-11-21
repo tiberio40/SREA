@@ -189,7 +189,6 @@
     <Compile Include="Controllers\JSonResult.cs" />
     <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Controllers\SalonesController.cs" />
-    <Compile Include="Controllers\SalonsPruebaController.cs" />
     <Compile Include="Controllers\SolicitudesController.cs" />
     <Compile Include="Controllers\Tipo_UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
@@ -246,6 +245,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="ClassDiagram1.cd" />
     <Content Include="App_Browsers\qt.browser" />
+    <None Include="Properties\PublishProfiles\364f0b8e-0ee0-4-231-b9ee - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\tiberio40.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -261,7 +261,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -328,17 +330,15 @@
     <Content Include="Views\Dia_Apartado\Modificar.cshtml" />
     <Content Include="Views\Dia_Apartado\Edit.cshtml" />
     <Content Include="Views\Dia_Apartado\Delete.cshtml" />
-    <Content Include="Views\SalonsPrueba\Create.cshtml" />
-    <Content Include="Views\SalonsPrueba\Delete.cshtml" />
-    <Content Include="Views\SalonsPrueba\Details.cshtml" />
-    <Content Include="Views\SalonsPrueba\Edit.cshtml" />
-    <Content Include="Views\SalonsPrueba\Index.cshtml" />
     <Content Include="Views\Contactenos\Create.cshtml" />
     <Content Include="Views\Contactenos\Delete.cshtml" />
     <Content Include="Views\Contactenos\Details.cshtml" />
     <Content Include="Views\Contactenos\Edit.cshtml" />
     <Content Include="Views\Contactenos\Index.cshtml" />
     <Content Include="Views\Salones\Details.cshtml" />
+    <Content Include="Views\Dia_Apartado\Details.cshtml" />
+    <Content Include="Views\Equipos\Details.cshtml" />
+    <Content Include="Views\Inventarios\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

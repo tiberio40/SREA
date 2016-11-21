@@ -14,6 +14,11 @@ namespace SREA.Controllers
     {
         private SREAContext db = new SREAContext();
 
+        public ActionResult GeneratePDF()
+        {
+            return new Rotativa.ActionAsPdf("Lista");
+        }
+
         // GET: Solicitudes
         public ActionResult Index()
         {
